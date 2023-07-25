@@ -41,9 +41,11 @@ const App = () => {
 
 
   function handleClick(){
-    show.current = show.current+10
-    console.log(show.current);
-    setFilteredItems(items.slice(0, show.current))
+    setTimeout(() => {
+      show.current = show.current+10
+      console.log(show.current);
+      setFilteredItems(items.slice(0, show.current))
+    }, 600);
   }
 
   return (
